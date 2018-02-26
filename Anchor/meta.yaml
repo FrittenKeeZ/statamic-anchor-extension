@@ -1,0 +1,6 @@
+name: Anchor
+version: "1.0"
+description: Extends the default Bard (MediumEditor) anchor functionality with internal links selection.
+url: https://github.com/FrittenKeeZ/statamic-anchor-extension
+developer: Frederik Sauer
+developer_url: https://github.com/FrittenKeeZ
