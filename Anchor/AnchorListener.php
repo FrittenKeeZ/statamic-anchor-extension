@@ -24,11 +24,6 @@ class AnchorListener extends Listener
      */
     public function handle()
     {
-        $route = request()->route();
-        if (! in_array($route->getName(), ['page.create', 'page.edit'])) {
-            return '';
-        }
-
         // Add Pages tree to config.
         $config = [
             'options' => [
@@ -72,7 +67,7 @@ class AnchorListener extends Listener
      * @param  string  $indent
      * @return \Illuminate\Support\Collection
      */
-    protected function generateInlinePagesOptions(array $tree, string $indent = '')
+    protected function generateInlinePagesOptions(array $tree, $indent = '')
     {
         return collect($tree)->flatMap(function (array $item) use ($indent) {
             $suggestion = [
@@ -93,7 +88,7 @@ class AnchorListener extends Listener
      * @param  int    $depth
      * @return \Illuminate\Support\Collection
      */
-    protected function generateNestedPagesOptions(array $tree, int $depth = 0)
+    protected function generateNestedPagesOptions(array $tree, $depth = 0)
     {
         return collect($tree)->flatMap(function (array $item) use ($depth) {
             $indent = $depth > 0 ? str_repeat('  ', $depth - 1) . '↳ ' : '';

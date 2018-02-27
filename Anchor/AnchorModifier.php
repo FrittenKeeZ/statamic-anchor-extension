@@ -17,7 +17,7 @@ class AnchorModifier extends Modifier
      * @param  array   $context  Contextual values.
      * @return mixed
      */
-    public function index(string $value, array $params, array $context)
+    public function index($value, array $params, array $context)
     {
         $useAbsoluteUrl = filter_var(array_get($params, 0, false), FILTER_VALIDATE_BOOLEAN);
         $method = $useAbsoluteUrl ? 'absoluteUrl' : 'url';
