@@ -25,7 +25,9 @@ class AnchorModifier extends Modifier
         $value = preg_replace_callback(
             self::PAGES_REGEX,
             function (array $matches) use ($method) {
-                return Page::find($matches[1])->$method();
+                $page = Page::find($matches[1]);
+
+                return $page ? $page->in(site_locale())->$method() : '';
             },
             $value
         );
