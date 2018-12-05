@@ -1,7 +1,0 @@
-fields:
-  custom_class_option:
-    type: text
-  link_validation:
-    type: toggle
-  target_checkbox:
-    type: toggle

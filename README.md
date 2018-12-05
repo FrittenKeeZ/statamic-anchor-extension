@@ -2,6 +2,17 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
+## Statamic 2.11.3 changes
+
+Statamic now has built in functionality for internal links!  
+Version 1.2 contains a migration command which will handle everything you need for Statamic 2.11.3.  
+
+```sh
+php please anchor:migrate
+```
+
+I hope you enjoyed this small addon :)
+
 ## Installation
 
 Download or clone the repository, then copy the folder `Anchor` to your site's `Addons` directory.
